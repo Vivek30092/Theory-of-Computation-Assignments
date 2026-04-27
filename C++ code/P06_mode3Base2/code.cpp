@@ -35,7 +35,7 @@ int main()
     }
 
     if(state == 0)
-        cout << "Accepted (binary number mod 3 = 0)";
+        cout << "Accepted (binary number mod 3 = 0)"<<endl;
     else
         cout << "Rejected";
 
