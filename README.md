@@ -2,13 +2,22 @@
   <img src="banner.png" alt="TOC ASSI Banner" width="800">
 </p>
 
-# 🧮 Theory of Computation (TOC) – 5th Semester Assignments
+# 🧮 Theory of Computation (TOC) Practical Lab Files (RGPV CS501 / AL605)
 
 [![Language - C](https://img.shields.io/badge/Language-C-blue?style=for-the-badge&logo=c)](https://developer.ibm.com/languages/c/)
 [![Language - C++](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B)](https://isocpp.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Stars](https://img.shields.io/github/stars/Vivek30092/Theory-of-Computation-Assignments?style=for-the-badge)](https://github.com/Vivek30092/Theory-of-Computation-Assignments)
 
-This repository contains academic assignments for the **Theory of Computation (TOC)** course. The implementations are cleanly separated into **C** and **C++** at the root level, demonstrating core automata theories (DFA/NFA validation, Moore/Mealy machines, complement computation, and binary mathematics).
+Welcome to the ultimate repository for **Theory of Computation (TOC) Practical Files, Lab Assignments, and Solutions**. This repository is specifically tailored for RGPV (Rajiv Gandhi Proudyogiki Vishwavidyalaya) students studying TOC under subject codes **CS501** (Computer Science & Engineering) and **AL605** (Artificial Intelligence & Machine Learning).
+
+The implementations are cleanly separated into **C** and **C++** at the root level, demonstrating core automata theories (including DFA/NFA validation, Moore/Mealy machines, complement computation, PDA parenthesized expression parsing, Turing Machines, and binary mathematics) accompanied by state diagrams and console screenshots.
+
+---
+
+## ⭐ Support the Project
+
+If this repository helps you with your TOC practical files, laboratory experiments, or university assignments, please **give it a ⭐ star!** It helps other RGPV students discover these resources.
 
 ---
 
@@ -139,14 +148,14 @@ Ensure you have `gcc` (for C programs) and `g++` (for C++ programs) installed on
 
 ## ✍️ Submitted By
 
-| Student Name | Enrollment No. | Course / Semester |
-| :--- | :---: | :--- |
-| **Vivek Kumar Choudhary** | 0873AL231027 | B.Tech CSE(AIML) – 6th Semester |
-| **Anil Yadav** | 0873CS231014 | B.Tech CSE – 5th Semester |
+| Student Name | Enrollment No. | Course / Semester | Subject Code (RGPV) |
+| :--- | :---: | :--- | :---: |
+| **Vivek Kumar Choudhary** | 0873AL231027 | B.Tech CSE(AIML) – 6th Semester | **AL605** |
+| **Anil Yadav** | 0873CS231014 | B.Tech CSE – 5th Semester | **CS501** |
 
 * **Session:** 2025-26
 * **Institution:** Sri Aurobindo Institute of Technology, Indore
-* **University:** rajiv gandhi proudyogiki vishwavidyalaya, Bhopal
+* **University:** rajiv gandhi proudyogiki vishwavidyalaya (RGPV), Bhopal
 
 
 
