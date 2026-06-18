@@ -1,3 +1,4 @@
+// Design  a program to convert  NFA to DFA.
 #include <iostream>
 #include <vector>
 #include <set>

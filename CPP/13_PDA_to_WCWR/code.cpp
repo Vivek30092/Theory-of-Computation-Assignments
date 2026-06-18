@@ -1,3 +1,4 @@
+// Design a program for PDA to accept WCW<sup>R where w is any string and W<sup>R is the reverse of that string and C is a Special symbol.
 #include <iostream>
 #include <stack>
 #include <string>
@@ -15,8 +16,16 @@ int main() {
 
     for (char ch : str) {
         switch (ch) {
-            case '0':
-            case '1':
+            case 'c':
+            case 'C':
+                if (foundC) { // More than one C
+                    valid = false;
+                } else {
+                    foundC = true;
+                }
+                break;
+
+            default:
                 if (!foundC) {
                     // Push symbols before C
                     st.push(ch);
@@ -29,17 +38,6 @@ int main() {
                     }
                 }
                 break;
-
-            case 'C':
-                if (foundC) { // More than one C
-                    valid = false;
-                } else {
-                    foundC = true;
-                }
-                break;
-
-            default:
-                valid = false;
         }
 
         if (!valid)

@@ -1,33 +1,38 @@
-// Design a program for Turing machine that's accepts the following language an bn cn where n > 0
-#include <iostream>
-#include <string>
-using namespace std;
+/* Question:
+   Design a program for Turing machine that accepts the language a^n b^n c^n where n > 0.
+*/
+
+#include <stdio.h>
+#include <string.h>
 
 int main() {
-    string tape;
-    cout << "Enter string (a^n b^n c^n): ";
-    cin >> tape;
+    char tape[1000];
+    printf("Enter string (a^n b^n c^n): ");
+    if (scanf("%999s", tape) != 1) {
+        return 0;
+    }
 
-    bool reject = false;
+    int reject = 0;
+    int len = strlen(tape);
 
-    while (true) {
+    while (1) {
         int i;
 
         // Find leftmost unmarked a
-        for (i = 0; i < tape.length(); i++) {
+        for (i = 0; i < len; i++) {
             if (tape[i] == 'a')
                 break;
         }
 
         // No a left
-        if (i == tape.length())
+        if (i == len)
             break;
 
         tape[i] = 'X';
 
         // Find matching b
-        bool foundB = false;
-        for (int j = i + 1; j < tape.length(); j++) {
+        int foundB = 0;
+        for (int j = i + 1; j < len; j++) {
             switch (tape[j]) {
                 case 'a':
                 case 'X':
@@ -35,20 +40,20 @@ int main() {
 
                 case 'b':
                     tape[j] = 'Y';
-                    foundB = true;
-                    j = tape.length();
+                    foundB = 1;
+                    j = len; // break inner loop
                     break;
             }
         }
 
         if (!foundB) {
-            reject = true;
+            reject = 1;
             break;
         }
 
         // Find matching c
-        bool foundC = false;
-        for (int j = 0; j < tape.length(); j++) {
+        int foundC = 0;
+        for (int j = 0; j < len; j++) {
             switch (tape[j]) {
                 case 'a':
                 case 'b':
@@ -58,21 +63,22 @@ int main() {
 
                 case 'c':
                     tape[j] = 'Z';
-                    foundC = true;
-                    j = tape.length();
+                    foundC = 1;
+                    j = len; // break inner loop
                     break;
             }
         }
 
         if (!foundC) {
-            reject = true;
+            reject = 1;
             break;
         }
     }
 
     // Final verification
     if (!reject) {
-        for (char ch : tape) {
+        for (int i = 0; i < len; i++) {
+            char ch = tape[i];
             switch (ch) {
                 case 'X':
                 case 'Y':
@@ -80,7 +86,7 @@ int main() {
                     break;
 
                 default:
-                    reject = true;
+                    reject = 1;
             }
 
             if (reject)
@@ -89,9 +95,9 @@ int main() {
     }
 
     if (!reject)
-        cout << "String Accepted" << endl;
+        printf("String Accepted\n");
     else
-        cout << "String Rejected" << endl;
+        printf("String Rejected\n");
 
     return 0;
 }
